@@ -24,8 +24,11 @@ def update_sentiment(dbname='random_4.db') :
 
     
     #getting sentiment score
+    #reading collection of Indonesian Languange positive and negative words
+    #positive words
     pos_list= open("./kata_positif.txt","r")
     pos_words = pos_list.readlines()
+    #negative words
     neg_list= open("./kata_negatif.txt","r")
     neg_words = neg_list.readlines()
     sentiment_score = []
