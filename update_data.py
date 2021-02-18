@@ -4,7 +4,7 @@ import sqlite3
 import pandas as pd
 
 
-def update_sentiment(dbname='random_4.db') : 
+def update_sentiment(dbname='sentiment.db') : 
     conn = sqlite3.connect(dbname)
     factory = StemmerFactory()
     stemmer = factory.create_stemmer()
