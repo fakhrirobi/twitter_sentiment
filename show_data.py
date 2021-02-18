@@ -7,10 +7,10 @@ def fetch_data(dbname='fakhrirobi.db') :
     start_date = input('tanggal awal format 2020-09-17\n')
     end_date = input('tanggal akhir format 2020-09-17\n')
 
-    query = ''' SELECT username,tanggal,tweet  FROM twitter_data WHERE tanggal  BETWEEN ? AND ? '''
+    query = ''' SELECT username,tanggal,tweet  FROM twitter_data WHERE date  BETWEEN ? AND ? '''
     cursor.execute(query,(start_date,end_date))
 
     view = cursor.fetchall()
     view
-    data_view = pd.DataFrame(data=view,columns=['username', 'tanggal','tweet'])
+    data_view = pd.DataFrame(data=view,columns=['username', 'date','tweet'])
     print(data_view)
