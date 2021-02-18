@@ -15,11 +15,11 @@ def visualize_data(dbname='fakhrirobi.db') :
     view = cursor.fetchall()
     view
     #printing the score of sentiment
-    print('nilai rata rata untuk sentimen vaksin covid-19 adalah \n'+ str(np.mean(data_view['sentiment'])))
-    print('nilai median  untuk sentimen vaksin covid-19 adalah \n'+ str(np.median(data_view['sentiment'])))
-    print('nilai standar deviasi untuk sentimen vaksin covid-19 adalah \n'+ str(np.std(data_view['sentiment'])))
+    print('average sentiment score for covid vaccine \n'+ str(np.mean(data_view['sentiment'])))
+    print('median sentiment score for covid vaccine \n'+ str(np.median(data_view['sentiment'])))
+    print('standard deviation score for covid vaccine \n'+ str(np.std(data_view['sentiment'])))
 
-    data_view = pd.DataFrame(data=view,columns=['id','twitter_id', 'username','tanggal','tweet','sentiment'])
+    data_view = pd.DataFrame(data=view,columns=['id','twitter_id', 'username','date','tweet','sentiment'])
     labels,freq = np.unique(data_view['sentiment'],return_counts=True)
     plt.bar(labels,freq,align='center')
     plt.gca().set_xticks(labels)
