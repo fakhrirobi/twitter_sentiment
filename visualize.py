@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np 
 
-def visualize_data(dbname='fakhrirobi.db') :
+def visualize_data(dbname='sentiment.db') :
     #adding start date and end date for tweet
     start_date = input('input start date, format 2020-09-17\n')
     end_date = input('input end date,  format 2020-09-17\n')
