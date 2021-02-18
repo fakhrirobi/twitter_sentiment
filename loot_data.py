@@ -5,7 +5,7 @@ import pandas as pd
 import emoji
 
 
-def load_data(dbname='fakhrirobi.db') : 
+def load_data(dbname='sentiment.db') : 
     bearer_token = "get the API key first by signing up dev account on twitter"
     consumer_key = "get the API key first by signing up dev account on twitter"
     consumer_secret = "get the API key first by signing up dev account on twitter"
